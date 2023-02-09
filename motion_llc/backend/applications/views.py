@@ -8,7 +8,7 @@ from rest_framework.viewsets import GenericViewSet
 import telebot
 
 # Create your views here.
-
+from .token import token
 import requests
 import telegram
 
@@ -34,7 +34,7 @@ class ApplicationAPIViewSets(viewsets.ModelViewSet):
 
         # Отправка сообщения в Telegram
         chat_id = "-1001740033990"
-        bot_token = "6109548614:AAEy46TM5vbTV0KUzADLTxVFLxEhezdB_v8"
+        bot_token = token
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
         payload = {"chat_id": chat_id, "text": message_text}
         requests.post(url, json=payload)

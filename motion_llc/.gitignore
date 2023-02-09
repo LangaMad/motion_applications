@@ -142,7 +142,7 @@ cython_debug/
 .idea/
 env
 /media
-
+token.py
 
 .DS_Store
 .vscode/
